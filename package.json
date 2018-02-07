@@ -1,0 +1,16 @@
+{
+  "name": "currencers",
+  "version": "1.0.0",
+  "description": "A simple weather forecast chatbot",
+  "author": "Riva Yudha",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "request": "^2.83.0",
+    "restify": "^6.3.4"
+  }
+}
