@@ -1,11 +1,11 @@
 {
   "name": "currencers",
   "version": "1.0.0",
-  "description": "A simple weather forecast chatbot",
+  "description": "A simple currencies converter chatbot",
   "author": "Riva Yudha",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
