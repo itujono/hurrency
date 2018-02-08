@@ -5,7 +5,10 @@
   "author": "Riva Yudha",
   "license": "MIT",
   "scripts": {
-    "start": "babel-watch app.js"
+    "start": "nodemon app.js"
+  },
+  "engines": {
+    "node": "8.9.4"
   },
   "dependencies": {
     "babel-watch": "^2.0.7",
