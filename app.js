@@ -68,6 +68,18 @@ server.post("/", (req, res, next) => {
         }
     }
 
+    if (status.code === 200 && result.action === "goodbye") {
+        const { outputCurrency, amountToConvert } = result.parameters
+        
+        const makanan = "Kamu pikir itu enak?"
+
+        res.json({
+            speech: makanan,
+            displayText: makanan,
+            source: "Currencers"
+        })
+    }
+
     return next()
 })
 
