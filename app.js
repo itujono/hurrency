@@ -69,18 +69,7 @@ server.post("/", (req, res, next) => {
     }
 
     if (status.code === 200 && result.action === "goodbye") {
-        const speech = result.fulfillment.speech,
-              url = result.fulfillment.message[1].payload.imageUrl
-
-        url = "http://codewell.id/"
-        
-        const isiText = "Kamu pikir itu enak?"
-
-        res.json({
-            imageUrl: url,
-            platform: "facebook",
-            type: 3
-        })
+        console.log("Sempardak berhasil!")
     }
 
     return next()
