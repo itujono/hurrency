@@ -5,7 +5,7 @@
   "author": "Riva Yudha",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "engines": {
     "node": "8.9.4"

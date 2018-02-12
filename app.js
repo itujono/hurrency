@@ -1,15 +1,14 @@
 
-const restify = require("restify")
-const bodyParser = require("body-parser")
+const Restify = require("restify")
 const request = require("request")
 
-const server = restify.createServer({
-    name: "Currencers!"
+const server = Restify.createServer({
+    name: "Currencers"
 })
 
 
-server.use(bodyParser.urlencoded({ extended: false }))
-server.use(bodyParser.json())
+server.use(Restify.plugins.bodyParser())
+server.use(Restify.plugins.jsonp())
 
 
 const convertCurrency = (amountToConvert, outputCurrency, callback) => {
@@ -51,7 +50,7 @@ server.post("/", (req, res, next) => {
             res.json({
                 speech: responseText,
                 displayText: responseText,
-                source: "Currencers!"
+                source: "Currencers"
             })
         } else {
 
@@ -61,7 +60,7 @@ server.post("/", (req, res, next) => {
                     res.json({
                         speech: result,
                         displayText: result,
-                        source: "Currencers!"
+                        source: "Currencers"
                     })
                 }
             })
