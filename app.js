@@ -10,6 +10,7 @@ const server = Restify.createServer({
 server.use(Restify.plugins.bodyParser())
 server.use(Restify.plugins.jsonp())
 
+const config = require("./config")
 
 const convertCurrency = (amountToConvert, outputCurrency, callback) => {
     const { amount, currency } = amountToConvert
