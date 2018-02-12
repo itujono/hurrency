@@ -10,22 +10,6 @@ const server = Restify.createServer({
 server.use(Restify.plugins.bodyParser())
 server.use(Restify.plugins.jsonp())
 
-const config = require("./config")
-
-const FBeamer = require("./fbeamer")
-const f = new FBeamer(config)
-
-server.get("/", (req, res, next) => {
-    f.registerHook(req, res)
-    return next()
-})
-
-server.post("/", (req, res, next) => {
-    f.incoming(req, res, msg => {
-        console.log(msg)
-    })
-    return next()
-})
 
 const convertCurrency = (amountToConvert, outputCurrency, callback) => {
     const { amount, currency } = amountToConvert
