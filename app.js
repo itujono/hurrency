@@ -11,6 +11,8 @@ server.use(Restify.plugins.bodyParser())
 server.use(Restify.plugins.jsonp())
 
 const config = require("./config")
+
+const FBeamer = require("./fbeamer")
 const f = new FBeamer(config)
 
 server.get("/", (req, res, next) => {
