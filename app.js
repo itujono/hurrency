@@ -69,14 +69,17 @@ server.post("/", (req, res, next) => {
     }
 
     if (status.code === 200 && result.action === "goodbye") {
-        const { outputCurrency, amountToConvert } = result.parameters
+        const speech = result.fulfillment.speech,
+              url = result.fulfillment.message[1].payload.imageUrl
+
+        url = "http://codewell.id/"
         
-        const makanan = "Kamu pikir itu enak?"
+        const isiText = "Kamu pikir itu enak?"
 
         res.json({
-            speech: makanan,
-            displayText: makanan,
-            source: "Currencers"
+            imageUrl: url,
+            platform: "facebook",
+            type: 3
         })
     }
 
